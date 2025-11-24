@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sujitha & Sushant's Wedding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
+
+    <style>
+        :root {
+            --primary: #4A5D4F; /* Sage Green */
+            --accent: #D4AF37;  /* Gold */
+            --bg-cream: #F9F7F2;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-cream);
+            color: #444;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .script-font {
+            font-family: 'Great Vibes', cursive;
+        }
+
+        .fade-in {
+            animation: fadeIn 1.5s ease-in forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .delay-1 { animation-delay: 0.3s; }
+        .delay-2 { animation-delay: 0.6s; }
+        .delay-3 { animation-delay: 0.9s; }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Leaf decoration css only illustration */
+        .leaf-decoration {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            opacity: 0.1;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Decorative Corner SVGs -->
+    <svg class="leaf-decoration top-0 left-0 rotate-180" viewBox="0 0 100 100" fill="currentColor" style="color: var(--primary);">
+        <path d="M50 0 C20 0 0 20 0 50 C0 80 20 100 50 100 C80 100 100 80 100 50 C100 20 80 0 50 0 Z M50 90 C30 90 10 70 10 50 C10 30 30 10 50 10 C70 10 90 30 90 50 C90 70 70 90 50 90 Z" />
+    </svg>
+    <svg class="leaf-decoration top-0 right-0 -scale-x-100 rotate-180" viewBox="0 0 100 100" fill="currentColor" style="color: var(--primary);">
+        <path d="M50 0 C20 0 0 20 0 50 C0 80 20 100 50 100 C80 100 100 80 100 50 C100 20 80 0 50 0 Z M50 90 C30 90 10 70 10 50 C10 30 30 10 50 10 C70 10 90 30 90 50 C90 70 70 90 50 90 Z" />
+    </svg>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-[#F9F7F2]/90 backdrop-blur-sm border-b border-stone-200 transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="text-2xl script-font text-[#4A5D4F]">S & S</div>
+                <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest text-stone-600">
+                    <a href="#home" class="hover:text-[#D4AF37] transition-colors">Home</a>
+                    <a href="#details" class="hover:text-[#D4AF37] transition-colors">Details</a>
+                </div>
+                <!-- Mobile menu button placeholder (simplified) -->
+                <button class="md:hidden text-stone-600" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#F9F7F2] border-b border-stone-200 p-4">
+            <div class="flex flex-col space-y-4 text-center text-sm uppercase tracking-widest text-stone-600">
+                <a href="#home" class="block hover:text-[#D4AF37]" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Home</a>
+                <a href="#details" class="block hover:text-[#D4AF37]" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Details</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen min-h-[600px] flex items-center justify-center text-center px-4 pt-16">
+        <div class="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center bg-no-repeat fixed-bg"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-[#F9F7F2]/50 via-transparent to-[#F9F7F2] z-0"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <p class="text-stone-500 uppercase tracking-[0.3em] text-sm mb-4 fade-in">With great joy</p>
+            <h1 class="text-6xl md:text-8xl script-font text-[#4A5D4F] mb-6 fade-in delay-1">Sujitha <br> <span class="text-4xl md:text-6xl text-[#D4AF37]">&</span> <br> Sushant</h1>
+            <div class="w-24 h-px bg-[#D4AF37] mx-auto my-8 fade-in delay-2"></div>
+            <p class="text-xl md:text-2xl text-stone-700 font-light mb-8 fade-in delay-2">
+                Invite you to celebrate their wedding
+            </p>
+            <div class="text-lg md:text-xl tracking-widest uppercase text-stone-600 border-y border-stone-300 py-4 inline-block px-12 fade-in delay-3">
+                Wednesday, November 26, 2025
+            </div>
+        </div>
+    </section>
+
+    <!-- Details Section -->
+    <section id="details" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-serif text-[#4A5D4F] mb-4">The Details</h2>
+                <p class="text-stone-500 italic">We can't wait to see you there</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Ceremony -->
+                <div class="text-center p-8 border border-stone-100 shadow-lg rounded-sm bg-[#F9F7F2] hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex justify-center mb-6 text-[#D4AF37]">
+                        <i data-lucide="heart-handshake" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-stone-800 mb-2">The Ceremony</h3>
+                    <p class="text-[#D4AF37] font-semibold text-sm tracking-wider uppercase mb-4">10:00 AM</p>
+                    <p class="text-stone-600 leading-relaxed mb-4">
+                        Marriage Registrar Office<br>
+                        Thane (W)<br>
+                        Maharashtra
+                    </p>
+                    <a href="https://maps.app.goo.gl/EFwbpGeggRfe1Knw6" target="_blank" class="text-xs uppercase tracking-widest text-[#4A5D4F] border-b border-[#4A5D4F] pb-1 hover:text-[#D4AF37] hover:border-[#D4AF37] transition-all">View Map</a>
+                </div>
+
+                <!-- Lunch -->
+                <div class="text-center p-8 border border-stone-100 shadow-lg rounded-sm bg-[#F9F7F2] hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex justify-center mb-6 text-[#D4AF37]">
+                        <i data-lucide="utensils-crossed" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-stone-800 mb-2">Lunch</h3>
+                    <p class="text-[#D4AF37] font-semibold text-sm tracking-wider uppercase mb-4">1:00 PM</p>
+                    <p class="text-stone-600 leading-relaxed mb-4">
+                        Tarasta, B-Wing<br>
+                        Centurion Business Square<br>
+                        Wagle Industrial Estate, Thane (W)
+                    </p>
+                    <a href="https://maps.app.goo.gl/B9ZKTKgWYLcDhYnn6" target="_blank" class="text-xs uppercase tracking-widest text-[#4A5D4F] border-b border-[#4A5D4F] pb-1 hover:text-[#D4AF37] hover:border-[#D4AF37] transition-all">View Map</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider Image -->
+    <div class="h-64 md:h-80 bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1511285560982-1351cdeb9821?ixlib=rb-4.0.3&auto=format&fit=crop&w=1978&q=80');">
+        <div class="h-full w-full bg-black/30 flex items-center justify-center">
+             <h2 class="text-4xl md:text-6xl script-font text-white drop-shadow-md">Love is Sweet</h2>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#4A5D4F] text-white py-12 text-center">
+        <h2 class="script-font text-4xl mb-6">S & S</h2>
+        <div class="flex justify-center space-x-6 mb-8 text-white/70">
+            <span class="uppercase tracking-widest text-xs">#susu2025</span>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+                nav.classList.replace('py-4', 'py-0');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.replace('py-0', 'py-4');
+            }
+        });
+
+        // Intersection Observer for fade-in elements on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            // Re-trigger animation on scroll logic if needed, 
+            // but for now CSS animation handles load. 
+            // This is ready for scroll-trigger expansion.
+        });
+    </script>
+</body>
+</html>
+
+
